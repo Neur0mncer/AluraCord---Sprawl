@@ -1,9 +1,12 @@
 import appConfig from '../config.json'
 import { Box, Button, Text, TextField, Image } from '@skynexui/components'
+import { urlObjectKeys } from 'next/dist/shared/lib/utils'
+
 
 function GlobalStyle() {
     return (
         <style global jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap'); 
         * {
           margin: 0;
           padding: 0;
@@ -11,7 +14,7 @@ function GlobalStyle() {
           list-style: none;
         }
         body {
-          font-family: 'Open Sans', sans-serif;
+          font-family: 'Train one', 'Open Sans', sans-serif;
         }
         /* App fit Height */ 
         html, body, #__next {
@@ -37,8 +40,8 @@ function Titulo(props) {
         <Tag>{props.children}</Tag>
         <style jsx>{`
               ${Tag} {
-                  color: ${appConfig.theme.colors.neutrals['000']};
-                  font-size: 24px;
+                  color: ${appConfig.theme.colors.primary['800']};
+                  font-size: 36px;
                   font-weight: 600;
               }
               `}</style>
@@ -61,7 +64,7 @@ function Titulo(props) {
 // export default HomePage
 
 export default function PaginaInicial() {
-    const username = 'peas';
+    const username = 'Neur0mncer';
 
     return (
         <>
@@ -69,8 +72,8 @@ export default function PaginaInicial() {
             <Box
                 styleSheet={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    backgroundColor: appConfig.theme.colors.primary[500],
-                    backgroundImage: 'url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)',
+                    backgroundColor: appConfig.theme.colors.primary[100],
+                    backgroundImage: 'url(https://images.squarespace-cdn.com/content/v1/5cfebab7bfcecb000194cc60/1586081852247-42Q0WN41Y8LETIK2GQBP/01.jpg?format=1000w)',
                     backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
                 }}
             >
@@ -97,7 +100,7 @@ export default function PaginaInicial() {
                             width: { xs: '100%', sm: '50%' }, textAlign: 'center', marginBottom: '32px',
                         }}
                     >
-                        <Titulo tag="h2">Boas vindas de volta!</Titulo>
+                        <Titulo tag="h2">HELLO FRIEND!</Titulo>
                         <Text variant="body3" styleSheet={{ marginBottom: '32px', color: appConfig.theme.colors.neutrals[300] }}>
                             {appConfig.name}
                         </Text>
@@ -118,10 +121,10 @@ export default function PaginaInicial() {
                             label='Entrar'
                             fullWidth
                             buttonColors={{
-                                contrastColor: appConfig.theme.colors.neutrals["000"],
-                                mainColor: appConfig.theme.colors.primary[500],
-                                mainColorLight: appConfig.theme.colors.primary[400],
-                                mainColorStrong: appConfig.theme.colors.primary[600],
+                                contrastColor: appConfig.theme.colors.neutrals["999"],
+                                mainColor: appConfig.theme.colors.primary[800],
+                                mainColorLight: appConfig.theme.colors.primary[900],
+                                mainColorStrong: appConfig.theme.colors.primary[900],
                             }}
                         />
                     </Box>

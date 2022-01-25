@@ -1,5 +1,5 @@
 {
-    "name": "Aluracord - Matrix (peas)",
+    "name": "Aluracord - FSociety (Neur0mncer)",
     "theme": {
         "colors": {
             "primary": {
@@ -11,8 +11,8 @@
                 "500": "#3F9142",
                 "600": "#2F8132",
                 "700": "#207227",
-                "800": "#0E5814",
-                "900": "#05400A"
+                "800": "#B11B25",
+                "900": "#D5202C"
             },
             "neutrals": {
                 "000": "#FFFFFF",
