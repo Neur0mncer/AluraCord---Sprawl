@@ -1,7 +1,7 @@
 import appConfig from '../config.json'
 import { Box, Button, Text, TextField, Image } from '@skynexui/components'
 import { urlObjectKeys } from 'next/dist/shared/lib/utils'
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
 function Titulo(props) {
@@ -19,6 +19,7 @@ function Titulo(props) {
         </>
     );
 }
+
 
 //Componente React
 // function HomePage() {
@@ -40,6 +41,7 @@ export default function PaginaInicial() {
 
     return (
         <>
+
             <Box
                 styleSheet={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -70,7 +72,9 @@ export default function PaginaInicial() {
                             infosDoEvento.preventDefault();
                             console.log('Alguém submeteu o form');
                             roteamento.push('/chat');
+                            const dados = fetch('https://api.github.com/users/${username}');
                             // jeito tradicional (window.location.href = '/chat';)
+                            dados
                         }}
                         styleSheet={{
                             display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
@@ -91,6 +95,7 @@ export default function PaginaInicial() {
                                 // Trocar o valor da variavel
                                 // através do React e avise quem precisa
                                 setUsername(valor);
+
                             }}
                             fullWidth
                             textFieldColors={{
